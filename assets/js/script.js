@@ -1,3 +1,4 @@
+
 // Daftar gambar
 const images = [
     'assets/image/gambar_1.jpeg',
@@ -33,20 +34,3 @@ changeImage();
 
 
 
-function getParameterByName(name) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(name);
-}
-
-
-const namaTamu = getParameterByName('untuk') || getParameterByName('kepada');
-
-
-if (namaTamu) {
-  document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('nama-tamu').textContent = namaTamu;
-  });
-} else {
-
-  document.getElementById('nama-tamu').textContent = "nama undangan";
-}

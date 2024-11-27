@@ -34,7 +34,7 @@
                     </div>
                     <div class="session-2 justify-content-end">
                         <p class="gretings py-3">Dear!</p>
-                        <p id="nama-tamu" class="nama-tamu">nama tamu undangan</p>
+                        <p id="nama-tamu" class="nama-tamu">Nama Tamu </p>
                         <a href="undangan.html" class="btn btn-info">
                             <img src="assets/image/invitation.png" alt="invt" class="invt">Buka Undangan
                         </a>
@@ -43,6 +43,27 @@
                 </div>
             </div>
         </div>
+        <script>
+            function getParameterByName(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+                }
+
+
+                const namaTamu = getParameterByName('untuk') || getParameterByName('kepada');
+
+
+                if (namaTamu) {
+                document.addEventListener('DOMContentLoaded', () => {
+                    document.getElementById('nama-tamu').textContent = namaTamu;
+                });
+                } else {
+
+                document.getElementById('nama-tamu').textContent = "nama undangan";
+            }
+
+
+        </script>
         <script src="assets/js/script.js"></script>
         <script src="assets/js/loader.js"></script>
         <script
